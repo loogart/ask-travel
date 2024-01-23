@@ -1,0 +1,431 @@
+.bw {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.bw:hover {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-filter: gray;
+    filter: gray;
+}
+
+@media (max-width: 767px) {
+    .healthAbroad {
+        background-repeat: no-repeat;
+        background-size: 150px 150px;
+        width: 150px;
+        height: 150px;
+        background-image: url('../img/tile_healthAbroad.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .travelInsurance {
+        background-repeat: no-repeat;
+        background-size: 150px 150px;
+        width: 150px;
+        height: 150px;
+        background-image: url('../img/tile_travelInsurance.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .generalConsularServices {
+        background-repeat: no-repeat;
+        background-size: 150px 150px;
+        width: 150px;
+        height: 150px;
+        background-image: url('../img/tile_generalConsularServices.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .destinationInformation {
+        background-repeat: no-repeat;
+        background-size: 150px 150px;
+        width: 150px;
+        height: 150px;
+        background-image: url('../img/tile_destinationInformation.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .passport {
+        background-repeat: no-repeat;
+        background-size: 150px 150px;
+        width: 150px;
+        height: 150px;
+        background-image: url('../img/tile_passport.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .children {
+        background-repeat: no-repeat;
+        background-size: 150px 150px;
+        width: 150px;
+        height: 150px;
+        background-image: url('../img/tile_children.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .emergencyAssistance {
+        background-repeat: no-repeat;
+        background-size: 150px 150px;
+        width: 150px;
+        height: 150px;
+        background-image: url('../img/tile_emergencyAssistance.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .citizenship {
+        background-repeat: no-repeat;
+        background-size: 150px 150px;
+        width: 150px;
+        height: 150px;
+        background-image: url('../img/tile_citizenship.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .side-panel-width {
+        width: 85%;
+    }
+}
+
+@media (min-width: 768px) {
+    .healthAbroad {
+        background-repeat: no-repeat;
+        background-size: 150px 150px;
+        width: 150px;
+        height: 150px;
+        background-image: url('../img/tile_healthAbroad.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .travelInsurance {
+        background-repeat: no-repeat;
+        background-size: 150px 150px;
+        width: 150px;
+        height: 150px;
+        background-image: url('../img/tile_travelInsurance.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .generalConsularServices {
+        background-repeat: no-repeat;
+        background-size: 150px 150px;
+        width: 150px;
+        height: 150px;
+        background-image: url('../img/tile_generalConsularServices.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .destinationInformation {
+        background-repeat: no-repeat;
+        background-size: 150px 150px;
+        width: 150px;
+        height: 150px;
+        background-image: url('../img/tile_destinationInformation.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .passport {
+        background-repeat: no-repeat;
+        background-size: 150px 150px;
+        width: 150px;
+        height: 150px;
+        background-image: url('../img/tile_passport.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .children {
+        background-repeat: no-repeat;
+        background-size: 150px 150px;
+        width: 150px;
+        height: 150px;
+        background-image: url('../img/tile_children.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .emergencyAssistance {
+        background-repeat: no-repeat;
+        background-size: 150px 150px;
+        width: 150px;
+        height: 150px;
+        background-image: url('../img/tile_emergencyAssistance.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .citizenship {
+        background-repeat: no-repeat;
+        background-size: 150px 150px;
+        width: 150px;
+        height: 150px;
+        background-image: url('../img/tile_citizenship.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .side-panel-width {
+        width: 40%;
+    }
+}
+
+@media (min-width: 992px) {
+    .healthAbroad {
+        background-repeat: no-repeat;
+        background-size: 200px 200px;
+        width: 200px;
+        height: 200px;
+        background-image: url('../img/tile_healthAbroad.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .travelInsurance {
+        background-repeat: no-repeat;
+        background-size: 200px 200px;
+        width: 200px;
+        height: 200px;
+        background-image: url('../img/tile_travelInsurance.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .generalConsularServices {
+        background-repeat: no-repeat;
+        background-size: 200px 200px;
+        width: 200px;
+        height: 200px;
+        background-image: url('../img/tile_generalConsularServices.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .destinationInformation {
+        background-repeat: no-repeat;
+        background-size: 200px 200px;
+        width: 200px;
+        height: 200px;
+        background-image: url('../img/tile_destinationInformation.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .passport {
+        background-repeat: no-repeat;
+        background-size: 200px 200px;
+        width: 200px;
+        height: 200px;
+        background-image: url('../img/tile_passport.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .children {
+        background-repeat: no-repeat;
+        background-size: 200px 200px;
+        width: 200px;
+        height: 200px;
+        background-image: url('../img/tile_children.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .emergencyAssistance {
+        background-repeat: no-repeat;
+        background-size: 200px 200px;
+        width: 200px;
+        height: 200px;
+        background-image: url('../img/tile_emergencyAssistance.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .citizenship {
+        background-repeat: no-repeat;
+        background-size: 200px 200px;
+        width: 200px;
+        height: 200px;
+        background-image: url('../img/tile_citizenship.png');
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.greyzone {
+    background-color: #e0e0e0!important;
+}
+
+*:focus {
+    outline: none;
+}
+
+
+/* jquery steps new CSS*/
+
+.wizard > .steps {
+    position: relative;
+    display: none;
+    width: 100%;
+}
+
+.wizard > .content {
+    background: transparent;
+    display: block;
+    margin: 0.1em;
+    min-height: 15em;
+    overflow-y: auto;
+    position: relative;
+    width: auto;
+    border-radius: 5px;
+}
+
+.wizard > .content > .body {
+    float: left;
+    position: inherit;
+    width: 100%;
+    height: 95%;
+    padding: 2.5%;
+}
+
+.wizard > .actions a {
+    background: #335075;
+    color: #fff;
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.wizard > .actions a:hover,
+.wizard > .actions a:active {
+    background: #1c578a;
+}
+
+.wizard > .actions .disabled a,
+.wizard > .actions .disabled a:hover,
+.wizard > .actions .disabled a:active {
+    background: #eee;
+    color: #aaa;
+}
+
+.wizard > .actions {
+    text-align: center;
+}
+
+.wizard > .content > .body ul {
+    list-style: none !important;
+}
+
+.greyzone-breadcrumbs {
+    background: transparent;
+    padding: 0;
+    color: #777;
+}
+
+.greyzone-btns > ul > li {
+    margin-bottom: 15px;
+}
+
+.select-greyzone {
+    padding: 5px 0 15px;
+}
+
+hr.hr-greyzone {
+    border: 1px dotted #777;
+}
+
+ul .bold-lists > li > details > summary > a {
+    color: red;
+}
+
+.modal.fade .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transition:all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+}
+
+.modal.in .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.custom-modal-disclaimer {
+    background-color: #111;
+    opacity: 100%;
+}
+
+.custom-modal-disclaimer > .modal-dialog > .modal-content {
+    border: none;
+    box-shadow: none;
+    color: #fff;
+}
+
+.custom-modal-disclaimer > .modal-dialog > .modal-content > .modal-body {
+    background-color: #111;
+}
+
+.well-vendors{
+    background-color:#e5e5e5;
+    box-shadow:inset 0 1px 4px rgba(0, 0, 0, 0.16);
+    border:0;
+}
+.vendor {
+    display: block;
+    height: 180px;
+    background-color: #335075;
+    border-radius: 22px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    margin: 15px 15px 30px;
+    color: #fff;
+    padding: 5%;
+    text-align: center;
+}
+
+.vendor a {
+    color: #fff;
+}
+
+.vendor:hover,
+.vendor:focus {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    background-color: #1c578a;
+    text-decoration: none;
+}
+
+.red-bg {
+    background-color: #bc3331;
+}
+
+.red-bg:hover,
+.red-bg-focus {
+    background-color: #842322;
+}
+
+.owl-wrapper a {
+    text-decoration: none;
+}
+
+.detail-summary{
+    background-color:#e5e5e5;
+    padding:15px;
+    -webkit-transition: all .1s ease-out;
+    transition:all .1s ease-out;
+}
+
+.detail-summary:hover{
+        background-color:#fafafa;
+
+}
+.dark-summary{
+    color:#333;
+}
+
+/*custom table formatting*/
+.bg-f8{background-color: #f8f8f8;}
+.bg-primary{background-color:#335075;color:#fff;}
+.table-rounded{border-radius:6px;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);}
+.table-rounded > tbody >tr >td:first-child{font-weight: bold;}
+.table-rounded > thead >tr >th:first-child {border-top-left-radius: 8px;}
+.table-rounded > thead >tr >th:last-child {border-top-right-radius: 8px;}
+.table-rounded > tbody >tr:last-child > td:first-child {border-bottom-left-radius: 8px;}
+.table-rounded > tbody >tr:last-child > td:last-child {border-bottom-right-radius: 8px;}
+
+/* new css May 2 2016*/
+table.dataTable thead .sorting_asc, 
+table.dataTable thead .sorting_desc {
+    background-color:#335075;
+    color:#fff;
+}
