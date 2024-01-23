@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Travel Wizard - S2</title>
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta name="description" content="Travel Wizard for Global Affairs Canada by Chris Soueidan of Loogart">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="./GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="./GCWeb/css/theme.css">
+    <link rel="stylesheet" href="./css/jquery.steps.css">
+    <link rel="stylesheet" href="./css/owl.carousel.css">
+    <link rel="stylesheet" href="./css/owl.theme.css">
+    <link rel="stylesheet" href="./css/select2.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header role="banner">
+        <div id="wb-bnr" class="container">
+            <section id="wb-lng" class="visible-md visible-lg text-right">
+                <h2 class="wb-inv">Language selection</h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="list-inline margin-bottom-none">
+                            <li><a lang="fr" href="index-fr.html">Français</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <div class="row">
+                <div class="brand col-xs-8 col-sm-9 col-md-6">
+                    <a href="http://www.canada.ca/en/index.html">
+                        <object type="image/svg+xml" tabindex="-1" data="./GCWeb/assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
+                </div>
+                <section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
+                    <h2>Search and menus</h2>
+                    <ul class="list-inline text-right chvrn">
+                        <li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Search and menus</span></span></span></a></li>
+                    </ul>
+                    <div id="mb-pnl"></div>
+                </section>
+                <section id="wb-srch" class="col-xs-6 text-right visible-md visible-lg">
+                    <h2>Search</h2>
+                    <form action="#" method="post" name="cse-search-box" role="search" class="form-inline">
+                        <div class="form-group">
+                            <label for="wb-srch-q" class="wb-inv">Search website</label>
+                            <input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Search Canada.ca" data-modal-show="voldeModal">
+                            <datalist id="wb-srch-q-ac">
+                                <!--[if lte IE 9]><select><![endif]-->
+                                <!--[if lte IE 9]></select><![endif]-->
+                            </datalist>
+                        </div>
+                        <div class="form-group submit">
+                            <button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+        <nav role="navigation" id="wb-sm" data-ajax-replace="./ajax/sitemenu-en.html" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
+            <div class="container nvbar">
+                <h2>Topics menu</h2>
+                <div class="row">
+                    <ul class="list-inline menu">
+                        <li><a href="http://www.esdc.gc.ca/en/jobs/index.page">Jobs</a></li>
+                        <li><a href="http://www.cic.gc.ca/english/index.asp">Immigration</a></li>
+                        <li><a href="http://travel.gc.ca">Travel</a></li>
+                        <li><a href="http://www.canada.ca/en/services/business/index.html">Business</a></li>
+                        <li><a href="http://www.canada.ca/en/services/benefits/index.html">Benefits</a></li>
+                        <li><a href="http://healthycanadians.gc.ca/index-eng.php">Health</a></li>
+                        <li><a href="http://www.canada.ca/en/services/taxes/index.html">Taxes</a></li>
+                        <li><a href="http://www.canada.ca/en/services/index.html">More services</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav role="navigation" id="wb-bc" property="breadcrumb">
+            <h2>You are here:</h2>
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="http://www.canada.ca/en/index.html">Home</a>
+                        </li>
+                        <li><a href="http://www.canada.ca/en/#">Travel</a>
+                        </li>
+                        <li><a href="http://www.canada.ca/en/#">Assistance Abroad</a>
+                        </li>
+                        <li>Travel Wizard</li>
+                    </ol>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" property="mainContentOfPage" class="container" id="slide-up2">
+
+        <h1 property="name" id="wb-cont">Abroad and in need of assistance?</h1>
+        <p class="lead">We can guide you to the right answer.</p>
+
+        <!-- Wizardry -->
+        <section>
+            <!-- SEARCH BAR-->
+            <div class="col-sm-12">
+                <form class="form-horizontal" role="form" method="get" action="#">
+                    <div class="form-group">
+                        <div class="col-lg-12 input-group">
+                            <input type="text" class="form-control" size="10" id="deptSearch" placeholder="Start typing your question..." />
+                            <span class="input-group-btn">
+                                <button type="submit" id="search-submit" class="btn btn-primary" name="search-submit"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search News</span>
+                            </button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- row 1-->
+            <div class="row">
+                <div class="container text-center">
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="#collapse1" data-toggle="collapse" aria-expanded="false" onclick="$('#slide-down1').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});">
+                            <div class="passport bw"></div>
+                        </a>
+                        <b>Passport</b>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="#!">
+                            <div class="children bw"></div>
+                        </a>
+                        <b>Children</b>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="index.html#slide-up2">
+                            <div class="emergencyAssistance bw"></div>
+                        </a>
+                        <b>Emergency Assistance</b>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="#!">
+                            <div class="citizenship bw"></div>
+                        </a>
+                        <b>Citizenship</b>
+                    </div>
+                </div>
+            </div>
+
+            <!-- collapsing zone 1 -->
+            <div class="row" id="slide-down1">
+                <div class="collapse" id="collapse1">
+                    <div class="well greyzone" id="slide-up1">
+                        <div id="wizard-1">
+                            <h3>Step 1</h3>
+                            <section>
+                                <!-- header section of greyzone -->
+                                <button class="close" href="#collapse1" data-toggle="collapse" aria-expanded="true" onclick="$('#slide-up2').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});"><span aria-hidden="true">&times;</span></button>
+                                <ol class="breadcrumb greyzone-breadcrumbs">
+                                    <li>Passport</li>
+                                </ol>
+                                <h2 style="margin-top:0;" class="text-center">How can we help?</h2>
+
+                                <!-- action buttons -->
+                                <section class="row text-center" style="margin-top:30px">
+                                    <div class="col-sm-6 greyzone-btns">
+                                        <ul class="list-unstyled">
+                                            <li><a class="btn btn-primary btn-block" id="next-step" href="#" onclick="$('#slide-up1').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});">How do I renew my passport?</a></li>
+                                            <li><a class="btn btn-primary btn-block" id="next-step" href="#" onclick="$('#slide-up1').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});" disabled="disabled">Is my passport valid for my destination?</a></li>
+                                            <li><a class="btn btn-primary btn-block" id="next-step" href="#" onclick="$('#slide-up1').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});" disabled="disabled">I am a dual citizen.</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6 greyzone-btns">
+                                        <ul class="list-unstyled">
+                                            <li><a class="btn btn-primary btn-block" id="next-step" href="#" onclick="$('#slide-up1').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});" disabled="disabled">I need to apply for a new passport.</a></li>
+                                            <li><a class="btn btn-primary btn-block" id="next-step" href="#" onclick="$('#slide-up1').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});" disabled="disabled">My child needs a passport.</a></li>
+                                            <li><a class="btn btn-primary btn-block" id="next-step" href="#" onclick="$('#slide-up1').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});" disabled="disabled">How do I replace a passport?</a></li>
+                                        </ul>
+                                    </div>
+                                </section>
+                            </section>
+                            <h3>Step 2</h3>
+                            <section>
+                                <!-- header section of greyzone -->
+                                <button class="close" href="#collapse1" data-toggle="collapse" aria-expanded="true" onclick="$('#slide-up2').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});"><span aria-hidden="true">&times;</span></button>
+                                <ol class="breadcrumb greyzone-breadcrumbs">
+                                    <li><a id="previous-step" href="#" onclick="$('#slide-up1').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});">Passport</a></li>
+                                    <li>Select destination</li>
+                                </ol>
+                                <h2 style="margin-top:0" class="text-center">Select your destination</h2>
+                                <p class="text-center">We will provide with the information you need based on your destination.</p>
+                                <!-- action buttons -->
+                                <section class="row text-center" style="margin-top:15px">
+                                    <div class="select-greyzone">
+                                        <select id="countrySelect" class="js-select2-countries" style="width:50%">
+                                            <option value="AF">Afghanistan</option>
+                                            <option value="AL">Albania</option>
+                                            <option value="DZ">Algeria</option>
+                                            <option value="AS">American Samoa</option>
+                                            <option value="AD">Andorra</option>
+                                            <option value="AO">Angola</option>
+                                            <option value="AI">Anguilla</option>
+                                            <option value="AQ">Antarctica</option>
+                                            <option value="AG">Antigua and Barbuda</option>
+                                            <option value="AR">Argentina</option>
+                                            <option value="AM">Armenia</option>
+                                            <option value="AW">Aruba</option>
+                                            <option value="AU">Australia</option>
+                                            <option value="AT">Austria</option>
+                                            <option value="AZ">Azerbaijan</option>
+                                            <option value="PT-20">Azores</option>
+                                            <option value="BS">Bahamas</option>
+                                            <option value="BH">Bahrain</option>
+                                            <option value="BD">Bangladesh</option>
+                                            <option value="BB">Barbados</option>
+                                            <option value="BY">Belarus</option>
+                                            <option value="BE">Belgium</option>
+                                            <option value="BZ">Belize</option>
+                                            <option value="BJ">Benin</option>
+                                            <option value="BM">Bermuda</option>
+                                            <option value="BT">Bhutan</option>
+                                            <option value="BO">Bolivia</option>
+                                            <option value="BQ">Bonaire</option>
+                                            <option value="BA">Bosnia and Herzegovina</option>
+                                            <option value="BW">Botswana</option>
+                                            <option value="BR">Brazil</option>
+                                            <option value="VG">British Virgin Islands</option>
+                                            <option value="BN">Brunei Darussalam</option>
+                                            <option value="BG">Bulgaria</option>
+                                            <option value="BF">Burkina Faso</option>
+                                            <option value="MM">Burma (Myanmar)</option>
+                                            <option value="BI">Burundi</option>
+                                            <option value="CV">Cabo Verde</option>
+                                            <option value="KH">Cambodia</option>
+                                            <option value="CM">Cameroon</option>
+                                            <option value="IC">Canary Islands</option>
+                                            <option value="KY">Cayman Islands</option>
+                                            <option value="CF">Central African Republic</option>
+                                            <option value="TD">Chad</option>
+                                            <option value="CL">Chile</option>
+                                            <option value="CN">China</option>
+                                            <option value="CO">Colombia</option>
+                                            <option value="KM">Comoros</option>
+                                            <option value="CK">Cook Islands</option>
+                                            <option value="CR">Costa Rica</option>
+                                            <option value="CI">Côte d'Ivoire (Ivory Coast)</option>
+                                            <option value="HR">Croatia</option>
+                                            <option value="CU">Cuba</option>
+                                            <option value="CW">Curaçao</option>
+                                            <option value="CY">Cyprus</option>
+                                            <option value="CZ">Czech Republic</option>
+                                            <option value="CD">Democratic Republic of Congo (Kinshasa)</option>
+                                            <option value="DK">Denmark</option>
+                                            <option value="DJ">Djibouti</option>
+                                            <option value="DM">Dominica</option>
+                                            <option value="DO">Dominican Republic</option>
+                                            <option value="EC">Ecuador</option>
+                                            <option value="EG">Egypt</option>
+                                            <option value="SV">El Salvador</option>
+                                            <option value="GQ">Equatorial Guinea</option>
+                                            <option value="ER">Eritrea</option>
+                                            <option value="EE">Estonia</option>
+                                            <option value="ET">Ethiopia</option>
+                                            <option value="FK">Falkland Islands</option>
+                                            <option value="FJ">Fiji</option>
+                                            <option value="FI">Finland</option>
+                                            <option value="FR">France</option>
+                                            <option value="GF">French Guiana</option>
+                                            <option value="PF">French Polynesia</option>
+                                            <option value="GA">Gabon</option>
+                                            <option value="GM">Gambia, The</option>
+                                            <option value="GE">Georgia</option>
+                                            <option value="DE">Germany</option>
+                                            <option value="GH">Ghana</option>
+                                            <option value="GI">Gibraltar</option>
+                                            <option value="GR">Greece</option>
+                                            <option value="GL">Greenland</option>
+                                            <option value="GD">Grenada</option>
+                                            <option value="GP">Guadeloupe</option>
+                                            <option value="GU">Guam</option>
+                                            <option value="GT">Guatemala</option>
+                                            <option value="GN">Guinea</option>
+                                            <option value="GW">Guinea-Bissau</option>
+                                            <option value="GY">Guyana</option>
+                                            <option value="HT">Haiti</option>
+                                            <option value="HN">Honduras</option>
+                                            <option value="HK">Hong Kong</option>
+                                            <option value="HU">Hungary</option>
+                                            <option value="IS">Iceland</option>
+                                            <option value="IN">India</option>
+                                            <option value="ID">Indonesia</option>
+                                            <option value="IR">Iran</option>
+                                            <option value="IQ">Iraq</option>
+                                            <option value="IE">Ireland</option>
+                                            <option value="IL">Israel, the West Bank and the Gaza Strip</option>
+                                            <option value="IT">Italy</option>
+                                            <option value="JM">Jamaica</option>
+                                            <option value="JP">Japan</option>
+                                            <option value="JO">Jordan</option>
+                                            <option value="KZ">Kazakhstan</option>
+                                            <option value="KE">Kenya</option>
+                                            <option value="KI">Kiribati</option>
+                                            <option value="KP">Korea, North (DPRK)</option>
+                                            <option value="KR">Korea, South</option>
+                                            <option value="XK">Kosovo</option>
+                                            <option value="KW">Kuwait</option>
+                                            <option value="KG">Kyrgyz Republic</option>
+                                            <option value="LA">Laos</option>
+                                            <option value="LV">Latvia</option>
+                                            <option value="LB">Lebanon</option>
+                                            <option value="LS">Lesotho</option>
+                                            <option value="LR">Liberia</option>
+                                            <option value="LY">Libya</option>
+                                            <option value="LI">Liechtenstein</option>
+                                            <option value="LT">Lithuania</option>
+                                            <option value="LU">Luxembourg</option>
+                                            <option value="MO">Macao</option>
+                                            <option value="MK">Macedonia</option>
+                                            <option value="MG">Madagascar</option>
+                                            <option value="MW">Malawi</option>
+                                            <option value="MY">Malaysia</option>
+                                            <option value="MV">Maldives</option>
+                                            <option value="ML">Mali</option>
+                                            <option value="MT">Malta</option>
+                                            <option value="MH">Marshall Islands</option>
+                                            <option value="MQ">Martinique</option>
+                                            <option value="MR">Mauritania</option>
+                                            <option value="MU">Mauritius</option>
+                                            <option value="YT">Mayotte</option>
+                                            <option value="MX">Mexico</option>
+                                            <option value="FM">Micronesia (FSM)</option>
+                                            <option value="MD">Moldova</option>
+                                            <option value="MC">Monaco</option>
+                                            <option value="MN">Mongolia</option>
+                                            <option value="ME">Montenegro</option>
+                                            <option value="MS">Montserrat</option>
+                                            <option value="MA">Morocco</option>
+                                            <option value="MZ">Mozambique</option>
+                                            <option value="NA">Namibia</option>
+                                            <option value="NR">Nauru</option>
+                                            <option value="NP">Nepal</option>
+                                            <option value="NL">Netherlands</option>
+                                            <option value="NC">New Caledonia</option>
+                                            <option value="NZ">New Zealand</option>
+                                            <option value="NI">Nicaragua</option>
+                                            <option value="NE">Niger</option>
+                                            <option value="NG">Nigeria</option>
+                                            <option value="NU">Niue</option>
+                                            <option value="MP">Northern Marianas</option>
+                                            <option value="NO">Norway</option>
+                                            <option value="OM">Oman</option>
+                                            <option value="PK">Pakistan</option>
+                                            <option value="PW">Palau</option>
+                                            <option value="PA">Panama</option>
+                                            <option value="PG">Papua New Guinea</option>
+                                            <option value="PY">Paraguay</option>
+                                            <option value="PE">Peru</option>
+                                            <option value="PH">Philippines</option>
+                                            <option value="PL">Poland</option>
+                                            <option value="PT">Portugal</option>
+                                            <option value="PR">Puerto Rico</option>
+                                            <option value="QA">Qatar</option>
+                                            <option value="CG">Republic of Congo (Brazzaville)</option>
+                                            <option value="RO">Romania</option>
+                                            <option value="RU">Russia</option>
+                                            <option value="RW">Rwanda</option>
+                                            <option value="KN">Saint Kitts and Nevis</option>
+                                            <option value="LC">Saint Lucia</option>
+                                            <option value="MF">Saint Martin</option>
+                                            <option value="VC">Saint Vincent & the Grenadines</option>
+                                            <option value="BL">Saint-Barthélemy</option>
+                                            <option value="PM">Saint-Pierre-et-Miquelon</option>
+                                            <option value="WS">Samoa</option>
+                                            <option value="SM">San Marino</option>
+                                            <option value="ST">São Tomé and Principe</option>
+                                            <option value="SA">Saudi Arabia</option>
+                                            <option value="SN">Senegal</option>
+                                            <option value="RS">Serbia</option>
+                                            <option value="SC">Seychelles</option>
+                                            <option value="SL">Sierra Leone</option>
+                                            <option value="SG">Singapore</option>
+                                            <option value="SX">Sint Maarten</option>
+                                            <option value="SK">Slovakia</option>
+                                            <option value="SI">Slovenia</option>
+                                            <option value="SB">Solomon Islands</option>
+                                            <option value="SO">Somalia</option>
+                                            <option value="ZA">South Africa</option>
+                                            <option value="SS">South Sudan</option>
+                                            <option value="ES">Spain</option>
+                                            <option value="LK">Sri Lanka</option>
+                                            <option value="SD">Sudan</option>
+                                            <option value="SR">Suriname</option>
+                                            <option value="SZ">Swaziland</option>
+                                            <option value="SE">Sweden</option>
+                                            <option value="CH">Switzerland</option>
+                                            <option value="SY">Syria</option>
+                                            <option value="TW">Taiwan</option>
+                                            <option value="TJ">Tajikistan</option>
+                                            <option value="TZ">Tanzania</option>
+                                            <option value="TH">Thailand</option>
+                                            <option value="TL">Timor-Leste (East Timor)</option>
+                                            <option value="TG">Togo</option>
+                                            <option value="TK">Tokelau</option>
+                                            <option value="TO">Tonga</option>
+                                            <option value="TT">Trinidad and Tobago</option>
+                                            <option value="TN">Tunisia</option>
+                                            <option value="TR">Turkey</option>
+                                            <option value="TM">Turkmenistan</option>
+                                            <option value="TC">Turks and Caicos Islands</option>
+                                            <option value="TV">Tuvalu</option>
+                                            <option value="UG">Uganda</option>
+                                            <option value="UA">Ukraine</option>
+                                            <option value="AE">United Arab Emirates</option>
+                                            <option value="GB">United Kingdom</option>
+                                            <option value="US">United States</option>
+                                            <option value="UY">Uruguay</option>
+                                            <option value="UZ">Uzbekistan</option>
+                                            <option value="VU">Vanuatu</option>
+                                            <option value="VE">Venezuela</option>
+                                            <option value="VN">Vietnam</option>
+                                            <option value="VI">Virgin Islands (U.S.)</option>
+                                            <option value="YE">Yemen</option>
+                                            <option value="ZM">Zambia</option>
+                                            <option value="ZW">Zimbabwe</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-offset-3 col-sm-3 greyzone-btns">
+                                        <ul class="list-unstyled">
+                                            <li><a class="btn btn-default btn-block" id="previous-step" onclick="$('#slide-up1').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});"><i class="fa fa-chevron-left"></i> Back</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-3 greyzone-btns">
+                                        <ul class="list-unstyled">
+                                            <li><a class="btn btn-primary btn-block" id="next-step" onclick="$('#slide-up1').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});">Next <i class="fa fa-chevron-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </section>
+                            </section>
+                            <h3>Step 3</h3>
+                            <section>
+                                <button class="close" href="#collapse1" data-toggle="collapse" aria-expanded="true" onclick="$('#slide-up2').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});"><span aria-hidden="true">&times;</span></button>
+                                <ol class="breadcrumb greyzone-breadcrumbs">
+                                    <li><a>Passport</a></li>
+                                    <li><a id="previous-step" href="#" onclick="$('#slide-up1').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});">Select destination</a></li>
+                                    <li>Eligibility</li>
+                                </ol>
+                                <h2>Passport renewal eligibility</h2>
+                                <h4>You may renew if your most recent Canadian passport:</h4>
+                                <ol>
+                                    <li>is valid or has been expired for no more than one year;</li>
+                                    <li>has the same name, sex, date of birth and place of birth that you would like to appear on your new passport;</li>
+                                    <li>has been issued with a 5-year or 10-year validity;</li>
+                                    <li>is not damaged;</li>
+                                    <li>has never been reported lost or stolen; and</li>
+                                    <li>has been issued when you were at least 16 years of age.</li>
+                                </ol>
+                                <hr class="hr-greyzone">
+
+                                <p>Do you fulfill all conditions mentioned above?</p>
+                                <!-- action buttons -->
+                                <section class="row text-center" style="margin-top:30px">
+                                    <div class="col-sm-offset-3 col-sm-3 greyzone-btns">
+                                        <ul class="list-unstyled">
+                                            <li><a class="btn btn-default btn-block" id="previous-step" onclick="$('#slide-up1').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});"><i class="fa fa-remove"></i> No</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-3 greyzone-btns">
+                                        <ul class="list-unstyled">
+                                            <li><a class="btn btn-primary btn-block" id="next-step" onclick="$('#slide-up1').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});"><i class="fa fa-check"></i> Yes</a></li>
+                                            <!--<li><a class="btn btn-primary btn-block" id="next-step" onclick="$('#slide-up1').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});"><i class="fa fa-check"></i> Yes</a></li>-->
+                                        </ul>
+                                    </div>
+                                </section>
+                            </section>
+                            <h3>Step 4</h3>
+                            <section>
+                                <!-- header sectoin of greyzone -->
+                                <button class="close" href="#collapse1" data-toggle="collapse" aria-expanded="true" onclick="$('#slide-up2').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});"><span aria-hidden="true">&times;</span></button>
+                                <ol class="breadcrumb greyzone-breadcrumbs">
+                                    <li><a>Passport</a></li>
+                                    <li><a>Select destination</a></li>
+                                    <li><a id="previous-step" href="#" onclick="$('#slide-up1').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});">Eligibility</a></li>
+                                    <li>Requirements</li>
+                                </ol>
+                                <h2>Passport renewal requirements</h2>
+                                <p>The Government of Canada website for Canadian passports will indicate what you need to submit with your renewal request, such as:</p>
+                                <ol>
+                                    <li>The required form</li>
+                                    <li>Your most recent passport</li>
+                                    <li>The required fee</li>
+                                    <li>Photos</li>
+                                    <li>References</li>
+                                </ol>
+
+                                <div class="section greyzone-btns">
+                                    <ul class="list-unstyled">
+                                        <li><a class="btn btn-primary" href="http://www.cic.gc.ca/english/passport/apply/renew/apply-how.asp" target="_blank">Passport Canada <i class="fa fa-chevron-right"></i></a></li>
+                                    </ul>
+                                </div>
+
+                                <hr class="hr-greyzone">
+                                <h4>Specific instructions</h4>
+                                <p>Specific instructions and service details are available and listed by Government of Canada offices abroad. Please consult the instructions for the office that is closest to you in the list below.</p>
+                                <p>Once completed and signed, you may submit your application to our office abroad at the address indicated. </p>
+
+                                <p>A list of local photographers who offer their services to Canadian travellers may be available for the Government of Canada office abroad closest to your location. See the list of offices below. To ensure the correct photo requirements are met, print a copy of the <a href="http://www.cic.gc.ca/english/pdf/pub/pass-photo-spec-eng.pdf" target="_blank">Passport photo specifications</a> to take with you to the photographer.</p>
+
+                                <ul class="list-unstyled bold-lists" id="slide-up3">
+                                    <li>
+                                        <details>
+                                            <summary class="detail-summary"><b>Canberra - High Commission of Canada</b></summary>
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><b>Street Address</b>
+                                                            <br>Commonwealth Avenue, Canberra ACT, Australia 2600</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>Telephone</b>
+                                                            <br>61 (2) 6270-4000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>Email</b>
+                                                            <br><a href="mailto:cnbra@international.gc.ca">cnbra@international.gc.ca</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <ul class="list-unstyled">
+                                                                <li>
+                                                                    <details>
+                                                                        <summary class="dark-summary"><b>Local passport services instructions</b></summary>
+                                                                        Canadians requiring passport services who reside in or are travelling in New South Wales, Queensland or the Northern Territory should send their application to the Canadian Consulate General in Sydney. Canadians residing in or travelling in the ACT, Victoria, Tasmania, South Australia, Western Australia should send their application to the Canadian High Commission in Canberra.
+                                                                    </details>
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <ul class="list-unstyled">
+                                                                <li>
+                                                                    <details>
+                                                                        <summary class="dark-summary"><b>Fees and payment information</b></summary>
+                                                                        <table class="table table-hover table-rounded">
+                                                                            <thead class="bg-primary">
+                                                                                <tr>
+                                                                                    <th>Detail</th>
+                                                                                    <th>AUD</th>
+                                                                                    <th>$CAN</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+
+                                                                                <tr>
+                                                                                    <td>10-year adult passport (age 16 or over)</td>
+                                                                                    <td>260.00</td>
+                                                                                    <td>160.00</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>5-year adult passport (age 16 or over)</td>
+                                                                                    <td>190.00</td>
+                                                                                    <td>120.00</td>
+
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>5-year Child passport (0-15 years of age) </td>
+                                                                                    <td>100.00</td>
+                                                                                    <td>57.00</td>
+
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Additional fee for replacing a valid lost or stolen passport</td>
+                                                                                    <td>45.00</td>
+                                                                                    <td>45.00</td>
+
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </details>
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <ul class="list-unstyled">
+                                                                <li>
+                                                                    <details>
+                                                                        <summary class="dark-summary"><b>Forms of payment accepted</b> </summary>
+                                                                        <p>If you plan to submit your payment by credit card, please fill out the <a href="http://travel.gc.ca/assistance/emergency-info/consular/fees" target="_blank">Credit Card Authorization Form</a>. Additional payment options may be available at each office location. Consult the list below.</p>
+                                                                        <ol>
+                                                                            <li>Credit card</li>
+                                                                            <li>Post order</li>
+                                                                            <li>Certified cheque</li>
+                                                                            <li>Ca$h</li>
+                                                                        </ol>
+                                                                    </details>
+                                                                </li>
+                                                            </ul>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <ul class="list-unstyled">
+                                                                <li>
+                                                                    <details>
+                                                                        <summary class="dark-summary"><b>Office hours and closures</b> </summary>
+                                                                        <table class="table table-hover table-rounded">
+                                                                            <thead class="bg-primary">
+                                                                                <tr>
+                                                                                    <th>Day</th>
+                                                                                    <th>From</th>
+                                                                                    <th>To</th>
+                                                                                    <th></th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>Monday</td>
+                                                                                    <td>8:30</td>
+                                                                                    <td>16:30</td>
+                                                                                    <td></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Tuesday</td>
+                                                                                    <td>8:30</td>
+                                                                                    <td>16:30</td>
+                                                                                    <td></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Wednesday</td>
+                                                                                    <td>8:30</td>
+                                                                                    <td>16:30</td>
+                                                                                    <td></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Thursday</td>
+                                                                                    <td>8:30</td>
+                                                                                    <td>16:30</td>
+                                                                                    <td></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Friday</td>
+                                                                                    <td>8:30</td>
+                                                                                    <td>16:30</td>
+                                                                                    <td></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Saturday</td>
+                                                                                    <td></td>
+                                                                                    <td></td>
+                                                                                    <td>Closed</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Sunday</td>
+                                                                                    <td></td>
+                                                                                    <td></td>
+                                                                                    <td>Closed</td>
+                                                                                </tr>
+                                                                                <tr class="bg-f8">
+                                                                                    <td><a class="wb-lbx" href="#centered-popup-closures">*Holidays and closures</a></td>
+                                                                                    <td></td>
+                                                                                    <td></td>
+                                                                                    <td></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </details>
+                                                                </li>
+                                                            </ul>
+
+                                                        </td>
+                                                    </tr>
+                                                    <!--<tr>
+                                                      <td>
+                                                       <ul class="list-unstyled">
+                                                            <li>
+                                                            <details>
+                                                        <summary class="dark-summary"><b><a role="button" data-toggle="collapse" href="#collapseOffices" aria-expanded="false" onclick="$('#slide-down2').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});">List of photographers</a></b>                                                    </summary>
+                                                          </details>
+                                                           </li>
+                                                        </ul>
+                                                        </td>
+                                                    </tr>-->
+                                                    <tr>
+                                                        <td>
+                                                            <a class="btn btn-primary load-more" role="button" data-toggle="collapse" href="#collapseOffices" aria-expanded="false" onclick="$('#slide-down2').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});"><i class="fa fa-camera"></i> View list of local photographers</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!-- collapsible carousel of business cards -->
+                                            <section id="slide-down2">
+                                                <div class="collapse" id="collapseOffices">
+                                                    <div class="well well-vendors">
+                                                        <a data-toggle="collapse" href="#collapseOffices" aria-expanded="false" onclick="$('#slide-up3').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});"><i class="fa fa-close pull-right"></i></a>
+                                                        <h4>Local photographers in Canberra</h4>
+                                                        <p>Please note that inclusion in this list does not constitute official endorsement by the Government of Canada.</p>
+                                                        <div id="carousel1" class="owl-carousel">
+                                                            <a class="overlay-lnk" href="#side-bar">
+                                                                <span class="vendor">
+                                                                   <ul>
+                                                                       <li><h6>Photographer</h6></li>
+                                                                       <li><h4>Manuka Photographic Centre</h4></li>
+                                                                       <li>Canberra</li>
+                                                                   </ul>
+                                                            </span>
+                                                            </a>
+                                                            <a class="overlay-lnk" href="#side-bar">
+                                                                <span class="vendor">
+                                                                   <ul>
+                                                                       <li><h6>Photographer</h6></li>
+                                                                       <li><h4>Bica Photographics</h4></li>
+                                                                       <li>Kingston</li>
+                                                                   </ul>
+                                                            </span>
+                                                            </a>
+                                                            <a class="overlay-lnk" href="#side-bar">
+                                                                <span class="vendor">
+                                                                   <ul>
+                                                                       <li><h6>Photographer</h6></li>
+                                                                       <li><h4>Paxtons</h4></li>
+                                                                       <li>Darwin</li>
+                                                                   </ul>
+                                                                </span>
+                                                            </a>
+                                                            <a class="overlay-lnk" href="#side-bar">
+                                                                <span class="vendor">
+                                                                   <ul>
+                                                                       <li><h6>Photographer</h6></li>
+                                                                       <li><h4>Photoland</h4></li>
+                                                                       <li>Brisbane</li>
+                                                                   </ul>
+                                                            </span>
+                                                            </a>
+                                                            <a class="overlay-lnk" href="#side-bar">
+                                                                <span class="vendor">
+                                                                   <ul>
+                                                                       <li><h6>Art Studio</h6></li>
+                                                                       <li><h4>Stein-Jacobs-Lord</h4></li>
+                                                                       <li>Alice Springs</li>
+                                                                   </ul>
+                                                            </span>
+                                                            </a>
+                                                            <a class="overlay-lnk" href="#side-bar">
+                                                                <span class="vendor">
+                                                                   <ul>
+                                                                       <li><h6>Photographer</h6></li>
+                                                                       <li><h4>Kazza’s Photographics</h4></li>
+                                                                       <li>Canberra</li>
+                                                                   </ul>
+                                                            </span>
+                                                            </a>
+                                                            <a class="overlay-lnk" href="#side-bar">
+                                                                <span class="vendor">
+                                                                   <ul>
+                                                                       <li><h6>School</h6></li>
+                                                                       <li><h4>University Cameras</h4></li>
+                                                                       <li>Brisbane</li>
+                                                                   </ul>
+                                                            </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </details>
+                                    </li>
+                                    <li>
+                                        <details>
+                                            <summary class="detail-summary"><b>Perth - Consulate of Canada</b></summary>
+                                        </details>
+                                    </li>
+                                    <li>
+                                        <details>
+                                            <summary class="detail-summary"><b>Sydney - Consulate General of Canada</b></summary>
+                                        </details>
+                                    </li>
+                                </ul>
+
+                                <section class="row text-center" style="margin-top:15px">
+                                    <div class="col-sm-offset-3 col-sm-3 greyzone-btns">
+                                        <ul class="list-unstyled">
+                                            <li><a class="btn btn-default btn-block" id="previous-step" href="#" onclick="$('#slide-up1').animatescroll({scrollSpeed:500,easing:'easeInOutQuart'});"><i class="fa fa-chevron-left"></i> Back</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-3 greyzone-btns">
+                                        <ul class="list-unstyled">
+                                            <li><a class="btn btn-success btn-block wb-lbx" href="#centred-popup" aria-controls="centred-popup" role="button">Got it.</a></li>
+                                        </ul>
+                                    </div>
+
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- row 2-->
+            <div class="row">
+                <div class="container text-center">
+                    <div class="col-xs-6 col-sm-3 col-md-3">
+                        <a href="#!">
+                            <div class="destinationInformation bw"></div>
+                        </a>
+                        <b>Destination Information</b>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-3">
+                        <a href="s16.html#slide-up2">
+                            <div class="generalConsularServices bw"></div>
+                        </a>
+                        <b>General Consular Services</b>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-3">
+                        <a href="#">
+                            <div class="travelInsurance bw"></div>
+                        </a>
+                        <b>Travel Insurance</b>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-3">
+                        <a href="#!">
+                            <div class="healthAbroad bw"></div>
+                        </a>
+                        <b>Health Services</b>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- page details -->
+        <div class="row pagedetails">
+            <div class="col-sm-5 col-xs-12 datemod">
+                <dl id="wb-dtmd">
+                    <dt>Date modified:&#32;</dt>
+                    <dd>
+                        <time property="dateModified">2016-02-09 by Chris Soueidan</time>
+                    </dd>
+                </dl>
+            </div>
+            <div class="clear visible-xs"></div>
+            <div class="col-sm-4 col-xs-6">
+                <a href="http://www.canada.ca/en/contact/feedback.html" class="btn btn-default"><span class="glyphicon glyphicon-comment mrgn-rght-sm"></span>Feedback<span class="wb-inv"> about this web site</span></a>
+            </div>
+            <div class="col-sm-3 col-xs-6 text-right">
+                <div class="wb-share" data-wb-share='{"lnkClass": "btn btn-default"}'></div>
+            </div>
+            <div class="clear visible-xs"></div>
+        </div>
+
+    </main>
+
+    <!-- modal-->
+    <section id="centred-popup" class="mfp-hide modal-dialog modal-content overlay-def">
+        <header class="modal-header">
+            <h2 class="modal-title">We are glad to help!</h2>
+        </header>
+        <div class="modal-body">
+            <p>Thank you for using the Travel Wizard. Consult our publication: Well on your way: A Canadian's guide to healthy travel abroad.</p>
+            <a href="index.html" class="btn btn-success">Sounds good</a>
+        </div>
+    </section>
+
+    <!-- modal closures-->
+    <section id="centered-popup-closures" class="mfp-hide modal-dialog modal-content overlay-def">
+        <header class="modal-header">
+            <h2 class="modal-title">Holidays and closures</h2>
+        </header>
+        <div class="modal-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Day</th>
+                        <th>Year</th>
+                        <th>Holiday name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>January</td>
+                        <td>1</td>
+                        <td>2016</td>
+                        <td>New Year's Day</td>
+                    </tr>
+                    <tr>
+                        <td>January</td>
+                        <td>26</td>
+                        <td>2016</td>
+                        <td>Australia Day</td>
+                    </tr>
+                    <tr>
+                        <td>March</td>
+                        <td>14</td>
+                        <td>2016</td>
+                        <td>Canberra Day</td>
+                    </tr>
+                    <tr>
+                        <td>March</td>
+                        <td>25</td>
+                        <td>2016</td>
+                        <td>Good Friday</td>
+                    </tr>
+                    <tr>
+                        <td>March</td>
+                        <td>28</td>
+                        <td>2016</td>
+                        <td>Easter Monday</td>
+                    </tr>
+                    <tr>
+                        <td>April</td>
+                        <td>25</td>
+                        <td>2016</td>
+                        <td>ANZAC Day</td>
+                    </tr>
+                    <tr>
+                        <td>June</td>
+                        <td>13</td>
+                        <td>2016</td>
+                        <td>Queen's Birthday</td>
+                    </tr>
+                    <tr>
+                        <td>September</td>
+                        <td>26</td>
+                        <td>2016</td>
+                        <td>Family and Community Day</td>
+                    </tr>
+                    <tr>
+                        <td>October</td>
+                        <td>5</td>
+                        <td>2016</td>
+                        <td>Labor Day (Australia)</td>
+                    </tr>
+                    <tr>
+                        <td>December</td>
+                        <td>26</td>
+                        <td>2016</td>
+                        <td>Boxing Day</td>
+                    </tr>
+                    <tr>
+                        <td>December</td>
+                        <td>27</td>
+                        <td>2016</td>
+                        <td>In lieu of Christmas Day</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+
+    <!-- modal emergency final-->
+    <section id="centred-popup-relatedlinks" class="mfp-hide modal-dialog modal-content overlay-def">
+        <header class="modal-header">
+            <h2 class="modal-title">Related links</h2>
+        </header>
+        <div class="modal-body">
+            <p>Please select one of the following options:</p>
+
+            <ul class="list-unstyled">
+                <li>
+                    <details>
+                        <summary>Read more</summary>
+                        <ol>
+                            <li><a href="http://www.cic.gc.ca/english/passport/times.asp"> Apply for a new passport (adults) </a></li>
+                            <li><a href="http://www.cic.gc.ca/english/passport/times.asp">Passports for children</a></li>
+                            <li><a href="http://www.cic.gc.ca/english/passport/times.asp">Replacing a lost or stolen passport</a></li>
+                            <li><a href="http://www.cic.gc.ca/english/passport/times.asp">Check processing times for passport services</a></li>
+                        </ol>
+                    </details>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled">
+                <li>
+                    <details>
+                        <summary>I want to contact someone directly.</a>
+                        </summary>
+                        <!-- START emgcy_phone -->
+                        <h2>Telephone:</h2>
+                        <h3>From outside Canada</h3>
+                        <ul>
+                            <li>Call the <a href="/assistance/embassies-consulates">nearest embassy or consulate</a>.</li>
+                            <li>+1 613 996 8885 (call collect where available)</li>
+                            <li><a href="/assistance/emergency-assistance/toll-free-numbers">Toll-free numbers in some countries</a></li>
+                        </ul>
+                        <h3>From inside Canada</h3>
+                        <ul>
+                            <li>613-996-8885</li>
+                            <li>1-800-387-3124 (toll-free from the U.S. and Canada only)</li>
+                        </ul>
+                        <!-- END emgcy_phone -->
+                        <!-- START emgcy_sms -->
+                        <h2>SMS:</h2>
+                        <ul>
+                            <li>613-209-1233 (carrier charges may apply)</li>
+                        </ul>
+                        <!-- END emgcy_sms -->
+                        <!-- START emgcy_tty -->
+                        <h2>TTY:</h2>
+                        <ul>
+                            <li>613-944-1310</li>
+                            <li>1-800-394-3472 (toll-free from the U.S. and Canada only)</li>
+                        </ul>
+                        <!-- END emgcy_tty -->
+                        <p></p>
+                        <p>If we are experiencing a high volume of calls, you may be asked to leave a message. Please follow the instructions carefully. We will return your call as soon as possible.</p>
+                        <!-- END emgcy_full_contact -->
+                    </details>
+                </li>
+            </ul>
+
+            <a href="index.html" class="btn btn-success">Sounds good</a>
+        </div>
+    </section>
+
+    <!-- bottom services -->
+    <section id="bottom-services" class="wb-overlay modal-content overlay-def wb-bar-b">
+        <header>
+            <h2 class="modal-title">Services provided by consular officials</h2>
+        </header>
+        <div style="background-color:#fff;padding:2.5%;">
+            <p>Canadian consular officials offer a range of services that vary from case to case and from country to country. They will discuss services appropriate to your case, with you or with a designated contact person. At your request, consular officials can:</p>
+
+            <ul>
+                <li>notify your family or friends of your situation and let them know if and how they can help;</li>
+                <li>help you communicate with your legal representative and family or friends;</li>
+                <li>request immediate and regular access to you;</li>
+                <li>seek to ensure you receive equitable treatment under the laws and in keeping with the standards of the host country, upon your arrest or detention;</li>
+                <li>obtain information about the status of your case and encourage authorities to process the case without undue delay;</li>
+                <li>provide you, your representative, or family with information on the local judicial and prison systems, approximate times for court action, typical sentences for the alleged offence, and bail provisions;</li>
+                <li>make every effort to ensure you receive adequate nutrition and medical and dental care;</li>
+                <li>arrange for the purchase (at your expense and if permitted) of food supplements, essential clothing, and other basic items not available through the prison system;</li>
+                <li>deliver letters and provide permitted reading material if normal postal services are not available;</li>
+                <li>convey messages to you if telephone or postal services are not available or practical;</li>
+                <li>contact relatives or friends on your behalf and ask them to send you funds if required; and</li>
+                <li>facilitate the transfer of funds to you if other means are unreliable or unavailable (fees apply).</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- bottom services not -->
+    <section id="bottom-services-not" class="wb-overlay modal-content overlay-def wb-bar-b">
+        <header style="background-color:#bc3331">
+            <h2 class="modal-title">Services <b>not</b> provided by consular officials</h2>
+        </header>
+        <div style="background-color:#fff;padding:2.5%;">
+            <p>Services not provided by consular officials (in a rotating triangle to expand/collapse) Canadian consular officials cannot provide some services to you for reasons of law and public policy. For example, they cannot:</p>
+
+            <ul>
+                <li>get you out of prison;</li>
+                <li>post bail or pay fines or legal fees;</li>
+                <li>provide legal advice or interpret local laws;</li>
+                <li>select or recommend a specific lawyer;</li>
+                <li>get involved in important matters between you and your lawyer;</li>
+                <li>forward or deliver parcels entering or leaving the country or clear them through customs;</li>
+                <li>circumvent rules regarding what can and cannot be brought into or taken out of a prison; or</li>
+                <li>make travel or accommodation arrangements for your family or friends.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- side bar -->
+    <section id="side-bar" class="wb-overlay modal-content overlay-def wb-panel-l side-panel-width">
+        <header>
+            <h2 class="modal-title">Povey-Stein-Goldberg</h2>
+        </header>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.1611029626984!2d149.1281119657644!3d-35.277120580290436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b164d664bcbf587%3A0xea4a26a76a6968db!2sVeterans+Park%2C+Canberra+ACT+2601%2C+Australia!5e0!3m2!1sen!2sca!4v1455731418838" width="100%" height="220" frameborder="0" style="border:0;" allowfullscreen></iframe>
+
+        <div style="background-color:#fff;padding:2.5%;">
+            <table class="table table-hover">
+                <tbody>
+                    <tr>
+                        <td><b>Name</b>
+                            <br>Manuka Photographic Centre</td>
+                    </tr>
+                    <tr>
+                        <td><b>Street address</b>
+                            <br>1 Palmerston Lane</td>
+                    </tr>
+                    <tr>
+                        <td><b>City</b>
+                            <br> Canberra</td>
+                    </tr>
+                    <tr>
+                        <td><b>Phone number</b>
+                            <br>(02) 6295-9766</td>
+                    </tr>
+                    <tr>
+                        <td><b>Email</b>
+                            <br><a href="mailto:valerie.anderson@international.gc.ca">info@manuka.au</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>Website</b>
+                            <br><a href="http://loogart.com" target="_blank">www.manukaphoto.net.au</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>Specialization</b>
+                            <br>N/A</td>
+                    </tr>
+                    <tr>
+                        <td><b>Languages</b>
+                            <br>English, French</td>
+                    </tr>
+                    <tr>
+                        <td><b>Details</b>
+                            <br>No additional details</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Custom Modal disclaimer -->
+    <div class="modal fade custom-modal-disclaimer" id="myModal" tabindex="0" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h2 class="modal-title" id="myModalLabel">Disclaimer</h2>
+                </div>
+                <div class="modal-body">
+                    <p>The following lists have been prepared by the Government of Canada for the convenience of Canadians who may require these services and assistance. It is provided on the understanding that the Government of Canada does not assume or undertake any legal responsibility, to you, or those affected, if you choose to take it into account when selecting a local service provider. Further and alternatively, the Government of Canada does not accept any liability to any person or company for any financial loss or damage arising from the use of this information or from any failure to give information.</p>
+                    <p> The Government of Canada aims to provide Canadians with as much relevant information to enable them to make informed decisions on their welfare. However, the lists are not recommendations and should not be treated as such. The information on the lists has been provided by the professional organizations or practitioners, and the sequence of the names is of no significance.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success btn-block" data-dismiss="modal">I understand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Voldemodal -->
+    <div class="modal fade custom-modal-disclaimer" id="voldeModal" tabindex="0" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document" style="width:100%">
+            <div class="modal-content">
+                <h5 class="text-center" id="myModalLabel">Avada Kedavra!</h5>
+                <img src="img/voldemort.jpg" style="width:100%;">
+            </div>
+        </div>
+    </div>
+
+    <footer role="contentinfo" id="wb-info">
+        <nav role="navigation" class="container visible-sm visible-md visible-lg wb-navcurr">
+            <h2 class="wb-inv">About this site</h2>
+            <div class="row">
+                <div class="col-sm-3 col-lg-3">
+                    <section>
+                        <h3>Contact information</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="passport.html">Scenario S2</a></li>
+                            <li><a href="s15.html">Scenario S15</a></li>
+                            <li><a href="s16.html">Scenario S16</a></li>
+                            <li><a href="index.html">Scenario S22</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>News</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="http://news.gc.ca/web/index-en.do">Newsroom</a></li>
+                            <li><a href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=1">News releases</a></li>
+                            <li><a href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=3">Media advisories</a></li>
+                            <li><a href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=970">Speeches</a></li>
+                            <li><a href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=980">Statements</a></li>
+                        </ul>
+                    </section>
+                </div>
+                <section class="col-sm-3 col-lg-3">
+                    <h3>Government</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="http://www.canada.ca/en/gov/system">How government works</a></li>
+                        <li><a href="http://www.canada.ca/en/gov/dept">Departments and agencies</a></li>
+                        <li><a href="http://pm.gc.ca/eng">Prime Minister</a></li>
+                        <li><a href="http://www.canada.ca/en/gov/ministers">Ministers</a></li>
+                        <li><a href="http://www.canada.ca/en/gov/publicservice">Public service and military</a></li>
+                        <li><a href="http://www.canada.ca/en/gov/policy">Policies, regulations and laws</a></li>
+                        <li><a href="http://www.canada.ca/en/gov/libraries">Libraries</a></li>
+                        <li><a href="http://www.canada.ca/en/gov/publications">Publications</a></li>
+                        <li><a href="http://www.canada.ca/en/gov/statistics">Statistics and data</a></li>
+                        <li><a href="http://www.canada.ca/en/newsite.html">About Canada.ca</a></li>
+                    </ul>
+                </section>
+                <section class="col-sm-3 col-lg-3 brdr-lft">
+                    <h3>Transparency</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="http://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
+                        <li><a href="http://open.canada.ca/en">Open government</a></li>
+                        <li><a href="http://www.canada.ca/en/transparency/disclosure.html">Proactive disclosure</a></li>
+                        <li><a href="http://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+                        <li><a href="http://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+                    </ul>
+                </section>
+                <div class="col-sm-3 col-lg-3 brdr-lft">
+                    <section>
+                        <h3>Feedback</h3>
+                        <p>
+                            <a href="http://www.canada.ca/en/contact/feedback.html"><img src="./GCWeb/assets/feedback.png" alt="Feedback about this Web site"></a>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Social media</h3>
+                        <p>
+                            <a href="http://www.canada.ca/en/social"><img src="./GCWeb/assets/social.png" alt="Social media"></a>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Mobile centre</h3>
+                        <p>
+                            <a href="http://www.canada.ca/en/mobile"><img src="./GCWeb/assets/mobile.png" alt="Mobile centre"></a>
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </nav>
+        <div class="brand">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6 visible-sm visible-xs tofpg">
+                        <a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
+                    </div>
+                    <div class="col-xs-6 col-md-12 text-right">
+                        <object type="image/svg+xml" tabindex="-1" role="img" data="./GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="./wet-boew/js/wet-boew.min.js"></script>
+    <script src="./js/animatescroll.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.steps2.js"></script>
+    <script src="./js/owl.carousel.js"></script>
+    <script src="./js/select2.min.js"></script>
+    <script>
+        //jquery steps script
+        var $wizard = $("#wizard-1");
+        $wizard.steps({
+            headerTag: "h3",
+            bodyTag: "section",
+            transitionEffect: "fade",
+            autoFocus: true,
+            enablePagination: false
+        });
+        $("a[id$=step]").on("click", function (e) {
+            e.preventDefault();
+            $wizard.steps($(this).attr("id").split("-")[0]);
+        });
+
+        //vendor carousel
+        $(document).ready(function () {
+            //$("#owl-example").owlCarousel();
+            var owl = $("#carousel1");
+            owl.owlCarousel({
+                itemsCustom: [
+                    [0, 1],
+                    [420, 2],
+                    [768, 3],
+                    [992, 4]
+                  ],
+                pagination: false,
+                navigation: true
+            });
+        });
+
+        //select2 plugin
+        $(document).ready(function () {
+            $(".js-select2-countries").select2({
+                placeholder: "Select a destination"
+            });
+        });
+
+        //manually open disclaimer
+        $('.load-more').click(function () {
+            setTimeout(function () {
+                $('#myModal').modal('show');
+            }, 450)
+        });
+        
+        //easter egg
+        $(document).on('focus', '[data-modal-show]', function () {
+            var _modal = $(this).attr('data-modal-show');
+            $('#' + _modal).modal({
+                show: true
+            })
+        });
+    </script>
+</body>
+
+</html>
